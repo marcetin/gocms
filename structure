@@ -1,0 +1,23 @@
+gocms/
+├── templates/
+│   ├── admin/
+│   │   ├── base.html
+│   │   ├── index.html
+│   │   ├── create.html
+│   │   ├── edit.html
+│   ├── frontend/
+│   │   ├── base.html
+│   │   ├── index.html
+│   │   ├── post.html
+├── routes/
+│   ├── admin.go
+│   ├── frontend.go
+├── static/
+│   ├── styles.css
+├── db/
+│   ├── db.go
+├── models/
+│   ├── post.go
+├── main.go
+├── go.mod
+├── go.sum

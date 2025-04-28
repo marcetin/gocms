@@ -1,0 +1,30 @@
+{{ define "Content" }}
+<div class="mb-4">
+    <a
+        href="/create"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >Create New Post</a
+    >
+</div>
+<div>
+    {{ range .Posts }}
+    <div class="bg-white shadow-md rounded p-4 mb-4">
+        <h2 class="text-xl font-bold">{{ .Title }}</h2>
+        <p>{{ .Content }}</p>
+        <div class="mt-2">
+            <a href="/edit/{{ .ID }}" class="text-blue-500 hover:underline"
+                >Edit</a
+            >
+            |
+            <form action="/delete/{{ .ID }}" method="POST" class="inline">
+                <button type="submit" class="text-red-500 hover:underline">
+                    Delete
+                </button>
+            </form>
+        </div>
+    </div>
+    {{ else }}
+    <p>No posts available.</p>
+    {{ end }}
+</div>
+{{ end }}
